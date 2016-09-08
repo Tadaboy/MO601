@@ -1,0 +1,3 @@
+[MICRO48] The Inner Most Loop Iteration counter: a new dimension in branch history - Andre Seznec (INRIA/IRISA), Joshua San Miguel (University of Toronto), Jorge Albericio (University of Toronto)
+[MICRO47] Efficient Memory Virtualization: Reducing Dimensionality of Nested Page Walks - Jayneel Gandhi (University of Wisconsin - Madison), Arkaprava Basu (AMD), Michael M. Swift (University of Wisconsin - Madison), Mark D. Hill (University of Wisconsin - Madison)
+
