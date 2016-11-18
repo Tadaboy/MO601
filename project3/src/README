@@ -1,6 +1,11 @@
-1) extraia o cbp2014sim
-2) cd cbp2014sim/sim
-3) edite predictor.h :
+1) baixe o simulador do cbp2014 http://www.irisa.fr/alf/downloads/seznec/cbp2014.ver3.tar.gz
+2) extraia em um diretorio
+3) baixe o codigo do artigo em http://www.irisa.fr/alf/downloads/seznec/TAGE-GSC-IMLI.tar
+4) extraia o arquivo TAGE_GSC_IMLI/Micro2015/predictor.h
+5) cd cbp2014/sim
+6) edite o predictor.cc deixando-o vazio
+7) substitua predictor.h pelo TAGE_GSC_IMLI/Micro2015/predictor.h
+8) edite predictor.h :
 - comente/descomente para testar o que deseja:
 -- linha 29 #define SC para usaar TAGE com SC
 -- linha 30 #define LOCALH para usar histórico local
@@ -12,9 +17,9 @@
 -- somente SC : TAGE-GSC
 -- SC,IMLI,IMLISIC,IMLIOH : IMLI
 -- SC,IMLI,IMLISIC : IMLI-SIC
-4) para compilar, remova os arquivos intermediários:
+9) para compilar, remova os arquivos intermediários:
 - rm main.o predictor predictor.o
 - make
-5) para rodar todos os 40 traces:
-- cd cbp2014sim/scripts
-- ./runall.pl -d ../results/<diretorio-dos-resultados>
+10) para rodar todos os 40 traces:
+- cd cbp2014/scripts
+- ./runall.pl -d ../results/<diretorio-alvo>
