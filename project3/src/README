@@ -1,0 +1,20 @@
+1) extraia o cbp2014sim
+2) cd cbp2014sim/sim
+3) edite predictor.h :
+- comente/descomente para testar o que deseja:
+-- linha 29 #define SC para usaar TAGE com SC
+-- linha 30 #define LOCALH para usar histórico local
+-- linha 31 #define LOOPPREDICTOR para usar loop predictor
+-- linha 32 #define IMLI para usar componente IMLI
+-- linha 33 #define IMLISIC para usar IMLI-SIC
+-- linha 34 #define IMLIOH para usar IMLI-OH
+- ex:
+-- somente SC : TAGE-GSC
+-- SC,IMLI,IMLISIC,IMLIOH : IMLI
+-- SC,IMLI,IMLISIC : IMLI-SIC
+4) para compilar, remova os arquivos intermediários:
+- rm main.o predictor predictor.o
+- make
+5) para rodar todos os 40 traces:
+- cd cbp2014sim/scripts
+- ./runall.pl -d ../results/<diretorio-dos-resultados>
